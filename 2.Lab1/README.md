@@ -5,14 +5,14 @@
 ```
 docker -v
 ```
-[](img/1.png)
+![](img/1.png)
 
 Узнать количество работающих контейнеров на хосте:
 
 ```
 docker ps
 ```
-[](img/2.png)
+![](img/2.png)
 
 Узнать количество образов на хосте:
 
@@ -77,40 +77,40 @@ docker ps -a
 ```
 docker ps -a
 ```
-![](img11.png)
+![](img/11.png)
 
 Удалить все контейнеры с хоста:
 
 ```
 docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 ```
-![](img12.png)
+![](img/12.png)
 
 Удалить определенный образ:
 
 ```
 docker rmi ubuntu
 ```
-![](img13.png)
+![](img/13.png)
 
 Скачать определенный образ без его запуска:
 
 ```
 docker pull nginx:1.14-alpine
 ```
-![](img14.png)
+![](img/14.png)
 
 Запустить контейнер с определеного образа и присвоить ему название:
 
 ```
 docker run --name webapp nginx:1.14-alpine
 ```
-![](img15.png)
+![](img/15.png)
 
 Удалить все образы на хосте (для этого нужно остановить все контейнеры и удалить их):
 
 ```
 docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q) && docker rmi $(docker images -a -q)
 ```
-![](img15.png)
+![](img/16.png)
 		
